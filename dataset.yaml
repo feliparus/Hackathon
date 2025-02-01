@@ -1,0 +1,6 @@
+train: ../arquivo/imagens
+val: ../arquivo/imagens
+test: ../arquivo/imagens
+
+nc: 1  # Número de classes
+names: ['objetos_cortantes']  # Lista de classes

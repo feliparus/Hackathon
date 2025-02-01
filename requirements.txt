@@ -1,0 +1,13 @@
+kaggle
+labelimg
+lxml
+numpy
+opencv-python
+pyqt5
+python-dotenv
+PyYAML
+roboflow
+scikit-learn
+sip
+tqdm
+ultralytics
