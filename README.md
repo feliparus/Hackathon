@@ -24,6 +24,7 @@ A estrutura do projeto é organizada da seguinte forma:
 
 ## Requisitos
 Para rodar o projeto, as dependências necessárias serão automaticamente instaladas ao executar o notebook 1_extracao.ipynb, que inclui a linha pip install -r requirements.txt na primeira célula.
+
 Também é necessário gerar o token de acesso no Kaggle, sendo possível gerar no website do Kaggle: Seetings -> API -> Create a new token. Com isso, será baixado automaticamente o arquivo JSON com sua api key, salve-o na pasta .kaggle, localizada por padrão na pasta raiz de usuário.
 
 ## Como Rodar
