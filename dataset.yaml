@@ -1,6 +1,6 @@
-train: ../arquivo/imagens
-val: ../arquivo/imagens
-test: ../arquivo/imagens
+train: arquivo/imagens/dataset-hackathon/train/images
+val: arquivo/imagens/dataset-hackathon/valid/images
+#test: ../arquivo/imagens (opcional, nao impacta no treinamento e nao foi utilizado na execução do modelo funcional)
 
-nc: 1  # Número de classes
-names: ['objetos_cortantes']  # Lista de classes
+nc: 2 # Número de classes
+names: ["knife", "pistol"] # Lista de classes
