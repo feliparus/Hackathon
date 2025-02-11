@@ -49,6 +49,11 @@ def baixar_dataset(api, diretorio_kaggle, diretorio_imagens):
 def detectar_video(caminho_video, modelo, conf, iou, imgsz, show, save,
                         save_txt, save_conf, save_crop, stream):
 
+    '''
+    Usa o predict para detectar os objetos cortantes no vídeo, os marcando com caixas delimitadoras e exibindo
+    seus nomes anotados.
+    '''
+
     results_video = modelo.predict(source=caminho_video,
                                    conf=conf,  # Confiança mínima para detecção
                                    iou=iou,  # Limite de IOU para supressão de caixas sobrepostas
@@ -66,13 +71,19 @@ def detectar_video(caminho_video, modelo, conf, iou, imgsz, show, save,
 
 
 def enviar_alerta(email_destino, mensagem):
-    remetente = "remetente@mail.com"
-    senha = "sua_senha"
+
+    '''
+    Função destinada a realizar o envio de email através de smtp. Utilizada para enviar relatório de alerta,
+    aqui configura-se os dados de acesso do email remetente.
+    '''
+
+    remetente = "nome@gmail.com"
+    senha = ""
 
     msg = MIMEText(mensagem)
     msg["Subject"] = "Alerta de Objeto Cortante Detectado"
     msg["From"] = remetente
-    msg["To"] = email_destino
+    msg["To"] = ", ".join(email_destino)
 
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
