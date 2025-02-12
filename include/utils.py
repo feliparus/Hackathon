@@ -42,7 +42,6 @@ def atualizar_datasets_dir(novo_datasets_dir):
 
 
 def baixar_dataset(api, diretorio_kaggle, diretorio_imagens):
-    os.makedirs(diretorio_imagens, exist_ok=True)
     try:
         api.dataset_download_files(diretorio_kaggle, path=diretorio_imagens, unzip=True)
     except Exception as e:
