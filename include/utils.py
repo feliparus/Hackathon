@@ -5,10 +5,12 @@ import shutil
 import smtplib
 import time
 import yaml
+from dotenv import load_dotenv
 
 from email.mime.text import MIMEText
 from sklearn.model_selection import train_test_split
 
+load_dotenv()
 
 def atualizar_datasets_dir(novo_datasets_dir):
     """
@@ -77,8 +79,8 @@ def enviar_alerta(email_destino, mensagem):
     aqui configura-se os dados de acesso do email remetente.
     '''
 
-    remetente = "nome@gmail.com"
-    senha = ""
+    remetente = os.getenv("email")
+    senha = os.getenv("senha_email")
 
     msg = MIMEText(mensagem)
     msg["Subject"] = "Alerta de Objeto Cortante Detectado"
