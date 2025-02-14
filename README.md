@@ -60,7 +60,7 @@ No Jupyter Lab, abra o arquivo 1_extracao.ipynb e execute as células para reali
 
 #### 3.Rodar o Notebook de Treinamento
 
-Após a preparação das imagens, abra e execute o notebook 2_treinamento.ipynb para treinar o modelo YOLO. O treinamento é realizado utilizando as imagens de treinamento, validação e teste para inferência. O modelo treinado será salvo em modelo/best.pt
+Após a preparação das imagens, abra e execute o notebook 2_treinamento.ipynb para treinar o modelo YOLO. O treinamento é realizado utilizando as imagens de treinamento, validação e teste para inferência. O modelo treinado será salvo em 'modelo/best.pt' e suas estatísticas do Ultralytics em 'runs/detect/train'.
 
 #### 4.Rodar o Notebook de Processamento de Vídeo
 
